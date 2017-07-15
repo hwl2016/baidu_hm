@@ -30,9 +30,53 @@
 		img_2.src = gif_2();
 	}
 
+	/**
+	 * cc: cookie 为 Hm_lpvt_ + id 是否存在
+	 * ck: 浏览器是否支持cookie
+	 * cl: 屏幕颜色
+	 * ds: 屏幕分辨率
+	 * ep: 
+	 * et: 
+	 * fl: flash版本
+	 * ja: 浏览器是否支持java程序
+	 * ln: 语言
+	 * lo: 
+	 * lt: 
+	 * nv: 
+	 * rnd: 随机数 Math.round(Math.random() * b.L)
+	 * si: hm.js的随机hash  可能对应网站的唯一标识
+	 * st: 
+	 * v: 版本
+	 * lv: 
+	 * sn: 随机数 Math.round(+new Date / 1E3) % 65535
+	 * u: 监控的网站url
+	 */
+
 	function gif_1() {
 		return 'http://hm.baidu.com/hm.gif?cc=0&ck=1&cl=24-bit&ds=1366x768&ep=1880070%2C17287&et=3&fl=26.0&ja=0&ln=zh-cn&lo=0&lt=1500039402&nv=0&rnd=' + Math.round(Math.random() * 2147483647) + '&si='+ si + '&st=4&v=1.2.16&lv=2&sn=15371&u=' + encodeURIComponent(page);
 	}
+
+	/**
+	 * cc: cookie 为 Hm_lpvt_ + id 是否存在
+	 * ck: 浏览器是否支持cookie
+	 * cl: 屏幕颜色
+	 * ds: 屏幕分辨率
+	 * et: 
+	 * fl: flash版本
+	 * ja: 浏览器是否支持java程序
+	 * ln: 语言
+	 * lo: 
+	 * lt: 
+	 * nv: 
+	 * rnd: 随机数 Math.round(Math.random() * b.L)
+	 * si: hm.js的随机hash  可能对应网站的唯一标识
+	 * st: 
+	 * v: 版本
+	 * lv: 
+	 * ct: 
+	 * tt: 网页的title
+	 * sn: 随机数 Math.round(+new Date / 1E3) % 65535
+	 */
 
 	function gif_2() {
 		return 'http://hm.baidu.com/hm.gif?cc=0&ck=1&cl=24-bit&ds=1366x768&et=0&fl=26.0&ja=0&ln=zh-cn&lo=0&lt=1500039402&nv=0&rnd=' + Math.round(Math.random() * 2147483647) + '&si=' + si + '&st=4&v=1.2.16&lv=2&ct=!!&tt=page%20test&sn=17251'
