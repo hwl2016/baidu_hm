@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h4>gif发送jsonp</h4>
+
+<script>
+	var si = '733856c0963d5529bc8a6e8464188b3b';
+	var page = 'http://www.xia008.com/test.html';
+	var len = 1000;
+
+	for(var i = 0; i < len; i++) {
+		ping(i);
+	}
+
+	function ping(t) {
+		var img_1 = new Image();
+		img_1.onload = function() {
+			console.log('img_1 loaded ' + t);
+		}
+		img_1.src = gif_1();
+
+		var img_2 = new Image();
+		img_2.onload = function() {
+			console.log('img_2 loaded ' + t);
+		}
+		img_2.src = gif_2();
+	}
+
+	function gif_1() {
+		return 'http://hm.baidu.com/hm.gif?cc=0&ck=1&cl=24-bit&ds=1366x768&ep=1880070%2C17287&et=3&fl=26.0&ja=0&ln=zh-cn&lo=0&lt=1500039402&nv=0&rnd=' + Math.round(Math.random() * 2147483647) + '&si='+ si + '&st=4&v=1.2.16&lv=2&sn=15371&u=' + encodeURIComponent(page);
+	}
+
+	function gif_2() {
+		return 'http://hm.baidu.com/hm.gif?cc=0&ck=1&cl=24-bit&ds=1366x768&et=0&fl=26.0&ja=0&ln=zh-cn&lo=0&lt=1500039402&nv=0&rnd=' + Math.round(Math.random() * 2147483647) + '&si=' + si + '&st=4&v=1.2.16&lv=2&ct=!!&tt=page%20test&sn=17251'
+	}
+
+
+</script>
+</body>
+</html>
