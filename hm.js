@@ -301,6 +301,7 @@
         }
         ;
         e.src = a
+        alert(a)
     }
     ;
     mt.O = {};
@@ -948,8 +949,7 @@
                     d.push("n=" + encodeURIComponent(a.name));
                     d.push("m=" + encodeURIComponent(a.message));
                     d.push("r=" + encodeURIComponent(document.referrer));
-                    e.log(b.K + "//" + b.W + "?" + d.join("&"))
-                    alert(b.K + "//" + b.W + "?" + d.join("&"));
+                    e.log(b.K + "//" + b.W + "?" + d.join("&"));
                 }
             },
             Ca: function() {
@@ -972,7 +972,6 @@
                     d.N(b);
                     k.d(a, "Function") && a.call(d)
                 })
-                alert(f)
             },
             da: function() {
                 var a = document.location.hash.substring(1)
