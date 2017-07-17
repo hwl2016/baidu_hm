@@ -1,14 +1,13 @@
 (function() {
-	// var __url__ = __cfg__.url;
-	// var __id__ = __cfg__.jsId;
-	// var __domain__ = __cfg__.domain;
+	var __url__ = __cfg__.url;
+	var __id__ = __cfg__.jsId;
+	var __domain__ = __cfg__.domain;
 
 
     var h = {}
       , mt = {}
       , c = {
-        id: '733856c0963d5529bc8a6e8464188b3b',
-        // id: __id__,
+        id: __id__,
         dm: ["api.cloudmobi.net/2250"],
         js: "tongji.baidu.com/hm-web/js/",
         etrk: [],
@@ -631,8 +630,8 @@
                     var a = h.b.a.u
                       , l = h.b.a.su;
                     h.b.a.u = m.protocol + "//" + document.location.host + b[1];
-                    g.U || (h.b.a.su = document.location.href);
-                    // g.U || (h.b.a.su = __url__);
+                    // g.U || (h.b.a.su = document.location.href);
+                    g.U || (h.b.a.su = __url__);
                     h.b.h();
                     h.b.a.u = a;
                     h.b.a.su = l
@@ -815,8 +814,8 @@
             R: function() {
                 for (var b = 0, a = c.dm.length; b < a; b++) {
                     var d = c.dm[b];
-                    if (-1 < d.indexOf("/") && this.V(document.location.href, d))
-                    // if (-1 < d.indexOf("/") && this.V(__url__, d))
+                    // if (-1 < d.indexOf("/") && this.V(document.location.href, d))
+                    if (-1 < d.indexOf("/") && this.V(__url__, d))
                         return d.replace(/^[^\/]+(\/.*)/, "$1") + "/"
                 }
                 return "/"
@@ -825,8 +824,8 @@
                 if (!document.referrer)
                     return b.k - b.o > c.vdur ? 1 : 4;
                 var a = u;
-                this.w(document.referrer) && this.w(document.location.href) ? a = r : (a = d.S(document.referrer),
-                // this.w(document.referrer) && this.w(__url__) ? a = r : (a = d.S(document.referrer),
+                // this.w(document.referrer) && this.w(document.location.href) ? a = r : (a = d.S(document.referrer),
+                this.w(document.referrer) && this.w(__url__) ? a = r : (a = d.S(document.referrer),
                 a = this.J(a || "", document.location.hostname));
                 return a ? b.k - b.o > c.vdur ? 1 : 4 : 3
             },
@@ -838,8 +837,8 @@
             setData: function(a, b, d) {
                 try {
                     m.set(a, b, {
-                        domain: this.H(),
-                        // domain: __domain__,
+                        // domain: this.H(),
+                        domain: __domain__,
                         path: this.R(),
                         G: d
                     }),
@@ -849,8 +848,8 @@
             Aa: function(a) {
                 try {
                     m.set(a, "", {
-                        domain: this.H(),
-                        // domain: __domain__,
+                        // domain: this.H(),
+                        domain: __domain__,
                         path: this.R(),
                         G: -1
                     }),
@@ -882,8 +881,8 @@
                 this.setData("Hm_lvt_" + c.id, f, c.age);
                 this.setData("Hm_lpvt_" + c.id, b.k);
                 f = b.k === this.getData("Hm_lpvt_" + c.id) ? "1" : "0";
-                if (0 === c.nv && this.w(document.location.href) && ("" === document.referrer || this.w(document.referrer)))
-                // if (0 === c.nv && this.w(__url__) && ("" === document.referrer || this.w(document.referrer)))
+                // if (0 === c.nv && this.w(document.location.href) && ("" === document.referrer || this.w(document.referrer)))
+                if (0 === c.nv && this.w(__url__) && ("" === document.referrer || this.w(document.referrer)))
                     a = 0,
                     d = 4;
                 this.a.nv = a;
@@ -925,8 +924,8 @@
                 this.a.v = "1.2.16";
                 this.a.cv = decodeURIComponent(this.getData("Hm_cv_" + c.id) || "");
                 this.a.tt = document.title || "";
-                var a = document.location.href;
-                // var a = __url__;
+                // var a = document.location.href;
+                var a = __url__;
                 this.a.cm = d.f(a, b.ua) || "";
                 this.a.cp = d.f(a, b.va) || d.f(a, b.Ka) || "";
                 this.a.cw = d.f(a, b.ta) || d.f(a, b.Ma) || "";
@@ -949,7 +948,7 @@
                     d.push("m=" + encodeURIComponent(a.message));
                     d.push("r=" + encodeURIComponent(document.referrer));
                     e.log(b.K + "//" + b.W + "?" + d.join("&"))
-                    alert(b.K + "//" + b.W + "?" + d.join("&"));
+                    console.log(d.join("&"));
                 }
             },
             Ca: function() {
@@ -972,7 +971,6 @@
                     d.N(b);
                     k.d(a, "Function") && a.call(d)
                 })
-                alert(f)
             },
             da: function() {
                 var a = document.location.hash.substring(1)
@@ -990,8 +988,8 @@
             },
             aa: function(a) {
                 var b = g.get("Hm_unsent_" + c.id) || ""
-                  , d = this.a.u ? "" : "&u=" + encodeURIComponent(document.location.href)
-                  // , d = this.a.u ? "" : "&u=" + encodeURIComponent(__url__)
+                  // , d = this.a.u ? "" : "&u=" + encodeURIComponent(document.location.href)
+                  , d = this.a.u ? "" : "&u=" + encodeURIComponent(__url__)
                   , b = encodeURIComponent(a.replace(/^https?:\/\//, "") + d) + (b ? "," + b : "");
                 g.set("Hm_unsent_" + c.id, b)
             },

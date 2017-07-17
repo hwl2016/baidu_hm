@@ -10,7 +10,7 @@
 <script>
 	var si = '733856c0963d5529bc8a6e8464188b3b';
 	var page = 'http://www.xia008.com/test.html';
-	var len = 1000;
+	var len = 1;
 
 	for(var i = 0; i < len; i++) {
 		ping(i);
@@ -18,16 +18,21 @@
 
 	function ping(t) {
 		var img_1 = new Image();
+		var g1 = gif_1();
+		var g2 = gif_2();
+
 		img_1.onload = function() {
 			console.log('img_1 loaded ' + t);
+			alert(g1)
 		}
-		img_1.src = gif_1();
+		img_1.src = g1;
 
 		var img_2 = new Image();
 		img_2.onload = function() {
 			console.log('img_2 loaded ' + t);
+			alert(g2)
 		}
-		img_2.src = gif_2();
+		img_2.src = g2;
 	}
 
 	/**
